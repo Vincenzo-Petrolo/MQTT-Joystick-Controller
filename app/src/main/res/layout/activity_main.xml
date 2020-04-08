@@ -1,0 +1,164 @@
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="io.github.controlwear.joystickdemo.MainActivity"
+    android:padding="16dp">
+
+    <io.github.controlwear.virtual.joystick.android.JoystickView
+        android:id="@+id/joystickView_left"
+        android:layout_width="440dp"
+        android:layout_height="536dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="0dp"
+        android:layout_marginLeft="0dp"
+        android:layout_marginTop="81dp"
+        android:layout_marginRight="361dp"
+        android:layout_marginBottom="0dp"
+        custom:JV_backgroundColor="#B3B6B6"
+        custom:JV_borderColor="#686767"
+        custom:JV_borderWidth="8dp"
+        custom:JV_buttonColor="#4CAF50" />
+
+    <TextView
+        android:id="@+id/textView_angle_left"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0°"/>
+
+
+    <TextView
+        android:id="@+id/textView_strength_left"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView_angle_left"
+        android:text="0%"/>
+
+
+    <TextView
+        android:id="@+id/textView_angle_right"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:text="0°"/>
+
+
+    <TextView
+        android:id="@+id/textView_strength_right"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/textView_angle_right"
+        android:text="0%"/>
+
+
+    <TextView
+        android:id="@+id/textView_coordinate_right"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/textView_strength_right"
+        android:text="x050:x050"/>
+
+
+    <io.github.controlwear.virtual.joystick.android.JoystickView
+        android:id="@+id/joystickView_right"
+        android:layout_width="452dp"
+        android:layout_height="538dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="79dp"
+        android:layout_marginRight="0dp"
+        android:layout_marginBottom="0dp"
+        custom:JV_backgroundColor="#B3B6B6"
+        custom:JV_borderColor="#686767"
+        custom:JV_borderWidth="8dp"
+        custom:JV_buttonColor="#F44336" />
+
+    <EditText
+        android:id="@+id/brokerText"
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="-9dp"
+        android:layout_marginLeft="-9dp"
+        android:layout_marginTop="47dp"
+        android:layout_marginEnd="-9dp"
+        android:layout_marginRight="-9dp"
+        android:layout_toStartOf="@+id/joystickView_right"
+        android:layout_toLeftOf="@+id/joystickView_right"
+        android:layout_toEndOf="@+id/joystickView_left"
+        android:layout_toRightOf="@+id/joystickView_left"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Broker address"
+        android:textColorLink="#000000" />
+
+    <EditText
+        android:id="@+id/topicText"
+        android:layout_width="125dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/brokerText"
+        android:layout_marginStart="-10dp"
+        android:layout_marginLeft="-10dp"
+        android:layout_marginTop="17dp"
+        android:layout_marginEnd="-15dp"
+        android:layout_marginRight="-15dp"
+        android:layout_toStartOf="@+id/joystickView_right"
+        android:layout_toLeftOf="@+id/joystickView_right"
+        android:layout_toEndOf="@+id/joystickView_left"
+        android:layout_toRightOf="@+id/joystickView_left"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Topic" />
+
+    <Button
+        android:id="@+id/connectButton"
+        android:layout_width="wrap_content"
+        android:layout_height="64dp"
+        android:layout_below="@+id/topicText"
+        android:layout_marginStart="2dp"
+        android:layout_marginLeft="2dp"
+        android:layout_marginTop="41dp"
+        android:layout_marginEnd="1dp"
+        android:layout_marginRight="1dp"
+        android:layout_toStartOf="@+id/joystickView_right"
+        android:layout_toLeftOf="@+id/joystickView_right"
+        android:layout_toEndOf="@+id/joystickView_left"
+        android:layout_toRightOf="@+id/joystickView_left"
+        android:text="CONNECT" />
+
+    <TextView
+        android:id="@+id/connectionStatus"
+        android:layout_width="146dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="54dp"
+        android:layout_marginEnd="543dp"
+        android:layout_marginRight="543dp"
+        android:layout_toStartOf="@+id/textView_strength_right"
+        android:layout_toLeftOf="@+id/textView_strength_right"
+        android:text="Connection Status" />
+
+    <Button
+        android:id="@+id/emergencyButton"
+        android:layout_width="105dp"
+        android:layout_height="44dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_marginStart="310dp"
+        android:layout_marginLeft="310dp"
+        android:layout_marginEnd="282dp"
+        android:layout_marginRight="282dp"
+        android:layout_toStartOf="@+id/textView_strength_right"
+        android:layout_toLeftOf="@+id/textView_strength_right"
+        android:text="STOP" />
+
+</RelativeLayout>

@@ -1,0 +1,2 @@
+rootProject.name='MQTT Joystick Controller'
+include ':app'

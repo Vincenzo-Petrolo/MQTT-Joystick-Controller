@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "/home/vincenzo/Coding/MQTTJoystickController/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-ca/values-ca.xml",
+            "outputFile": "/home/vincenzo/Coding/MQTT-Joystick-Controller/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-ca/values-ca.xml",
             "map": [
                 {
                     "source": "/home/vincenzo/.gradle/caches/transforms-2/files-2.1/da95e0dd41fd0c634661df2a0f122634/core-1.1.0/res/values-ca/values-ca.xml",

@@ -816,6 +816,7 @@ id on
 id packed
 id parent
 id parentPanel
+id password
 id percent
 id progress_circular
 id progress_horizontal
@@ -882,6 +883,7 @@ id unchecked
 id uniform
 id up
 id useLogo
+id username
 id vertical
 id withText
 id wrap
@@ -938,8 +940,6 @@ layout select_dialog_item_material
 layout select_dialog_multichoice_material
 layout select_dialog_singlechoice_material
 layout support_simple_spinner_dropdown_item
-mipmap ic_launcher
-mipmap ic_launcher_round
 string abc_action_bar_home_description
 string abc_action_bar_up_description
 string abc_action_menu_overflow_description

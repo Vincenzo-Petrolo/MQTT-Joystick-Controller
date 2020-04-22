@@ -29,8 +29,10 @@ public class ControllerActivity extends Activity {
     private EditText brokerAddress;
     private EditText topic;
     private TextView connectionStatus;
+    private EditText username;
+    private EditText password;
 
-    private MQTTManager mqttManager;
+    protected MQTTManager mqttManager;
     private JoystickClass joystickClass;
 
     /**
@@ -48,19 +50,24 @@ public class ControllerActivity extends Activity {
         this.brokerAddress  = (EditText) findViewById(R.id.brokerText);
         this.topic          = (EditText) findViewById(R.id.topicText);
         this.connectionStatus = (TextView) findViewById(R.id.connectionStatus);
+        this.username       = (EditText) findViewById(R.id.username);
+        this.password       = (EditText) findViewById(R.id.password);
 
         this.mqttManager    = new MQTTManager(this.brokerAddress.getText().toString(),this);
         this.joystickClass  = new JoystickClass(this);
 
 
-        final MQTTManager tmp           = this.mqttManager;
+        final ControllerActivity activity         = this;
         final TextView tmpStatus        = this.connectionStatus;
 
         this.connectButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                mqttManager = new MQTTManager(brokerAddress.getText().toString(), activity);
+                mqttManager.getMqttConnectOptions().setUserName(getUsername());
+                mqttManager.getMqttConnectOptions().setPassword(getPassword().toCharArray());
                 try {
-                    tmp.getMqttClient().connect(tmp.getMqttConnectOptions(), null, new IMqttActionListener() {
+                    mqttManager.getMqttClient().connect(mqttManager.getMqttConnectOptions(), null, new IMqttActionListener() {
                         @Override
                         public void onSuccess(IMqttToken iMqttToken) {
                             tmpStatus.setText("Connected");
@@ -71,6 +78,8 @@ public class ControllerActivity extends Activity {
                         public void onFailure(IMqttToken iMqttToken, Throwable throwable) {
                             tmpStatus.setText("Failed");
                             tmpStatus.setTextColor(Color.RED);
+                            throwable.printStackTrace();
+                            System.out.println(throwable.getMessage());
                         }
                     });
                 } catch (MqttException e) {
@@ -82,9 +91,25 @@ public class ControllerActivity extends Activity {
         this.stopButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                mqttManager.sendMessage("STOP","STOP");
             }
         });
+    }
+
+    /**
+     *
+     * @return the text in the username field
+     */
+    public String getUsername(){
+        return this.username.getText().toString();
+    }
+
+    /**
+     *
+     * @return the password in the password field
+     */
+    public String getPassword(){
+        return this.password.getText().toString();
     }
 
     /**

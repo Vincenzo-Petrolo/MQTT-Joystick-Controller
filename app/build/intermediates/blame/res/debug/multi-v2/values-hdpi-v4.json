@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "/home/vincenzo/Coding/MQTTJoystickController/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-hdpi-v4/values-hdpi-v4.xml",
+            "outputFile": "/home/vincenzo/Coding/MQTT-Joystick-Controller/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-hdpi-v4/values-hdpi-v4.xml",
             "map": [
                 {
                     "source": "/home/vincenzo/.gradle/caches/transforms-2/files-2.1/ea88890b09526096266c9c16859169ae/appcompat-1.1.0/res/values-hdpi-v4/values-hdpi-v4.xml",

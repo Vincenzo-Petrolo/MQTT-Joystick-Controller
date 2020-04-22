@@ -17,10 +17,11 @@
         android:allowBackup="true"
         android:appComponentFactory="androidx.core.app.CoreComponentFactory"
         android:debuggable="true"
-        android:icon="@mipmap/ic_launcher_round"
+        android:icon="@drawable/ic_launcher_round"
         android:label="MQTT Controller"
-        android:roundIcon="@mipmap/ic_launcher_round"
+        android:roundIcon="@drawable/ic_launcher_round"
         android:supportsRtl="true"
+        android:testOnly="true"
         android:theme="@style/AppTheme" >
         <service android:name="org.eclipse.paho.android.service.MqttService" >
         </service>

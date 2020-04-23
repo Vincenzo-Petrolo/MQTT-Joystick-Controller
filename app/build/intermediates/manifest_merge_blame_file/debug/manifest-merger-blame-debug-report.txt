@@ -35,30 +35,31 @@
 21-->/home/vincenzo/Coding/MQTT-Joystick-Controller/app/src/main/AndroidManifest.xml:13:9-56
 22        android:supportsRtl="true"
 22-->/home/vincenzo/Coding/MQTT-Joystick-Controller/app/src/main/AndroidManifest.xml:14:9-35
-23        android:theme="@style/AppTheme" >
-23-->/home/vincenzo/Coding/MQTT-Joystick-Controller/app/src/main/AndroidManifest.xml:15:9-40
-24        <service android:name="org.eclipse.paho.android.service.MqttService" >
-24-->/home/vincenzo/Coding/MQTT-Joystick-Controller/app/src/main/AndroidManifest.xml:16:9-18:19
-24-->/home/vincenzo/Coding/MQTT-Joystick-Controller/app/src/main/AndroidManifest.xml:16:18-77
-25        </service>
-26
-27        <activity
-27-->/home/vincenzo/Coding/MQTT-Joystick-Controller/app/src/main/AndroidManifest.xml:20:9-27:20
-28            android:name="com.example.mqttjoystickcontroller.ControllerActivity"
-28-->/home/vincenzo/Coding/MQTT-Joystick-Controller/app/src/main/AndroidManifest.xml:20:19-87
-29            android:screenOrientation="landscape" >
-29-->/home/vincenzo/Coding/MQTT-Joystick-Controller/app/src/main/AndroidManifest.xml:21:13-50
-30            <intent-filter>
-30-->/home/vincenzo/Coding/MQTT-Joystick-Controller/app/src/main/AndroidManifest.xml:22:13-26:29
-31                <action android:name="android.intent.action.MAIN" />
-31-->/home/vincenzo/Coding/MQTT-Joystick-Controller/app/src/main/AndroidManifest.xml:23:17-69
-31-->/home/vincenzo/Coding/MQTT-Joystick-Controller/app/src/main/AndroidManifest.xml:23:25-66
-32
-33                <category android:name="android.intent.category.LAUNCHER" />
-33-->/home/vincenzo/Coding/MQTT-Joystick-Controller/app/src/main/AndroidManifest.xml:25:17-77
-33-->/home/vincenzo/Coding/MQTT-Joystick-Controller/app/src/main/AndroidManifest.xml:25:27-74
-34            </intent-filter>
-35        </activity>
-36    </application>
-37
-38</manifest>
+23        android:testOnly="true"
+24        android:theme="@style/AppTheme" >
+24-->/home/vincenzo/Coding/MQTT-Joystick-Controller/app/src/main/AndroidManifest.xml:15:9-40
+25        <service android:name="org.eclipse.paho.android.service.MqttService" >
+25-->/home/vincenzo/Coding/MQTT-Joystick-Controller/app/src/main/AndroidManifest.xml:16:9-18:19
+25-->/home/vincenzo/Coding/MQTT-Joystick-Controller/app/src/main/AndroidManifest.xml:16:18-77
+26        </service>
+27
+28        <activity
+28-->/home/vincenzo/Coding/MQTT-Joystick-Controller/app/src/main/AndroidManifest.xml:20:9-27:20
+29            android:name="com.example.mqttjoystickcontroller.ControllerActivity"
+29-->/home/vincenzo/Coding/MQTT-Joystick-Controller/app/src/main/AndroidManifest.xml:20:19-87
+30            android:screenOrientation="landscape" >
+30-->/home/vincenzo/Coding/MQTT-Joystick-Controller/app/src/main/AndroidManifest.xml:21:13-50
+31            <intent-filter>
+31-->/home/vincenzo/Coding/MQTT-Joystick-Controller/app/src/main/AndroidManifest.xml:22:13-26:29
+32                <action android:name="android.intent.action.MAIN" />
+32-->/home/vincenzo/Coding/MQTT-Joystick-Controller/app/src/main/AndroidManifest.xml:23:17-69
+32-->/home/vincenzo/Coding/MQTT-Joystick-Controller/app/src/main/AndroidManifest.xml:23:25-66
+33
+34                <category android:name="android.intent.category.LAUNCHER" />
+34-->/home/vincenzo/Coding/MQTT-Joystick-Controller/app/src/main/AndroidManifest.xml:25:17-77
+34-->/home/vincenzo/Coding/MQTT-Joystick-Controller/app/src/main/AndroidManifest.xml:25:27-74
+35            </intent-filter>
+36        </activity>
+37    </application>
+38
+39</manifest>

@@ -45,7 +45,7 @@ public class JoystickClass {
                 tmpLeftAngleTextView.setText(angle + "°");
                 tmpLeftStrenghtTextView.setText(strength + "%");
 
-                controllerActivity.getMqttManager().sendMessage(Integer.toString(angle) + " " + Integer.toString(strength),"/left");
+                controllerActivity.getMqttManager().sendMessage(Integer.toString(angle) + " " + Integer.toString(strength),controllerActivity.getTopic()+"/left");
 
             }
         });
@@ -56,7 +56,7 @@ public class JoystickClass {
                 tmpRightAngleTextView.setText(angle + "°");
                 tmpRightStrenghtTextView.setText(strength + "%");
 
-                controllerActivity.getMqttManager().sendMessage(Integer.toString(angle) + " " + Integer.toString(strength),"/right");
+                controllerActivity.getMqttManager().sendMessage(Integer.toString(angle) + " " + Integer.toString(strength),controllerActivity.getTopic()+"/right");
             }
         });
     }

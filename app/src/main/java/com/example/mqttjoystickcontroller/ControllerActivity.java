@@ -63,9 +63,16 @@ public class ControllerActivity extends Activity {
         this.connectButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                mqttManager = new MQTTManager(brokerAddress.getText().toString(), activity);
-                mqttManager.getMqttConnectOptions().setUserName(getUsername());
-                mqttManager.getMqttConnectOptions().setPassword(getPassword().toCharArray());
+                if (!activity.brokerAddress.getText().toString().isEmpty()){
+                    mqttManager = new MQTTManager(brokerAddress.getText().toString(), activity);
+                }else {
+                    mqttManager = new MQTTManager(activity);
+                    activity.brokerAddress.setText(mqttManager.getUserBrokerAddress());
+                }
+                if (!activity.username.getText().toString().isEmpty() && !activity.password.getText().toString().isEmpty()){
+                    mqttManager.getMqttConnectOptions().setUserName(getUsername());
+                    mqttManager.getMqttConnectOptions().setPassword(getPassword().toCharArray());
+                }
                 try {
                     mqttManager.getMqttClient().connect(mqttManager.getMqttConnectOptions(), null, new IMqttActionListener() {
                         @Override
@@ -118,5 +125,13 @@ public class ControllerActivity extends Activity {
      */
     public MQTTManager  getMqttManager(){
         return this.mqttManager;
+    }
+
+    /**
+     *
+     * @return the text written in topic when one of the two joysticks is moved
+     */
+    public String getTopic() {
+        return this.topic.getText().toString();
     }
 }

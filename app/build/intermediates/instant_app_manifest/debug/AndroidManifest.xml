@@ -21,6 +21,7 @@
         android:label="MQTT Controller"
         android:roundIcon="@drawable/ic_launcher_round"
         android:supportsRtl="true"
+        android:testOnly="true"
         android:theme="@style/AppTheme" >
         <service android:name="org.eclipse.paho.android.service.MqttService" >
         </service>

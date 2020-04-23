@@ -27,7 +27,7 @@ public class MQTTManager {
      * @param controllerActivity the activity where everything happens
      */
     public MQTTManager(ControllerActivity controllerActivity){
-        this.userBrokerAddress  = "mosquitto.org";
+        this.userBrokerAddress  = "mqtt.eclipse.org";
         Context cntx            = controllerActivity.getApplicationContext();
         String  address         = this.PROT + this.userBrokerAddress + this.PORT;
         this.mqttClient         = new MqttAndroidClient(cntx,address,"AndroidMqttController");
@@ -93,5 +93,13 @@ public class MQTTManager {
         } catch (MqttException e) {
             e.printStackTrace();
         }
+    }
+
+    /**
+     *
+     * @return the default broker address
+     */
+    public String getUserBrokerAddress(){
+        return  this.userBrokerAddress;
     }
 }

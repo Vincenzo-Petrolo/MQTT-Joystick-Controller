@@ -98,8 +98,8 @@
         android:layout_toEndOf="@+id/joystickView_left"
         android:layout_toRightOf="@+id/joystickView_left"
         android:ems="10"
+        android:hint="Broker address"
         android:inputType="textPersonName"
-        android:text="Broker address"
         android:textColorLink="#000000" />
 
     <EditText
@@ -113,8 +113,8 @@
         android:layout_toEndOf="@+id/emergencyButton"
         android:layout_toRightOf="@+id/emergencyButton"
         android:ems="10"
-        android:inputType="textPersonName"
-        android:text="Topic" />
+        android:hint="Topic"
+        android:inputType="textPersonName" />
 
     <Button
         android:id="@+id/connectButton"
@@ -160,8 +160,8 @@
         android:layout_centerInParent="true"
         android:layout_marginBottom="13dp"
         android:ems="10"
-        android:inputType="textPersonName"
-        android:text="Username" />
+        android:hint="Username"
+        android:inputType="textPersonName" />
 
     <EditText
         android:id="@+id/password"
@@ -171,7 +171,7 @@
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="98dp"
         android:ems="10"
-        android:inputType="textPassword"
-        android:text="password" />
+        android:hint="Password"
+        android:inputType="textPassword" />
 
 </RelativeLayout>

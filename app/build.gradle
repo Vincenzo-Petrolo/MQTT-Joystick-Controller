@@ -8,8 +8,8 @@ android {
         applicationId "mqtt_controller.application"
         minSdkVersion 16
         targetSdkVersion 29
-        versionName '2'
-        versionCode 2
+        versionName '3'
+        versionCode 3
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
 

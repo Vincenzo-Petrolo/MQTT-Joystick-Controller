@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="mqtt_controller.application"
-    android:versionCode="2"
-    android:versionName="2" >
+    android:versionCode="3"
+    android:versionName="3" >
 
     <uses-sdk
         android:minSdkVersion="16"
@@ -20,7 +20,6 @@
         android:label="MQTT Controller"
         android:roundIcon="@drawable/ic_launcher_round"
         android:supportsRtl="true"
-        android:testOnly="true"
         android:theme="@style/AppTheme" >
         <service android:name="org.eclipse.paho.android.service.MqttService" >
         </service>

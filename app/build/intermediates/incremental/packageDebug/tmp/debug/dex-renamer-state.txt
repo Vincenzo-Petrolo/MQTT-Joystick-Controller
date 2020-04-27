@@ -1,4 +1,0 @@
-#Thu Apr 23 12:06:03 CEST 2020
-base.0=/home/vincenzo/Coding/MQTT-Joystick-Controller/app/build/intermediates/dex/debug/out/classes.dex
-path.0=classes.dex
-renamed.0=classes.dex

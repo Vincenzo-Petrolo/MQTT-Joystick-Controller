@@ -1,1 +1,0 @@
-[{"outputType":{"type":"MERGED_MANIFESTS"},"apkData":{"type":"MAIN","splits":[],"versionCode":3,"versionName":"3","enabled":true,"outputFile":"app-debug.apk","fullName":"debug","baseName":"debug","dirName":""},"path":"AndroidManifest.xml","properties":{"packageId":"mqtt_controller.application","split":"","minSdkVersion":"16"}}]
